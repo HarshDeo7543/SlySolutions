@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sly Solutions Internships</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #f4f4f4, #e8f5e9);
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        header {
+            background: linear-gradient(90deg, #4CAF50, #66BB6A);
+            color: white;
+            padding: 1.5rem 0;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            letter-spacing: 1px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: text-decoration 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 2rem auto;
+        }
+
+        #internships h2 {
+            font-size: 2rem;
+            color: #333;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .internships-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: center;
+        }
+
+        .internship {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            width: 100%;
+            max-width: 45%;
+            text-align: center;
+            box-sizing: border-box;
+            position: relative;
+            border: 1px solid #e0e0e0;
+        }
+
+        .internship:hover {
+            transform: scale(1.02) rotate(-1deg);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+        }
+
+        .internship::before {
+            content: "🌐";
+            font-size: 2rem;
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+        }
+
+        .internship h2 {
+            color: #4CAF50;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .internship p {
+            margin: 1rem 0;
+            line-height: 1.8;
+            font-size: 1.05rem;
+            color: #555;
+        }
+
+        .apply-button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            font-size: 1rem;
+            display: inline-block;
+            transition: background-color 0.3s, transform 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .apply-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.2);
+            transition: left 0.5s ease;
+        }
+
+        .apply-button:hover::before {
+            left: 100%;
+        }
+
+        .apply-button:hover {
+            background-color: #45a049;
+            transform: translateY(-2px);
+        }
+
+        footer {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 0.875rem;
+        }
+
+        footer div {
+            margin-top: 0.5rem;
+        }
+
+        footer i {
+            margin: 0 8px;
+            color: white;
+            font-size: 1.25rem;
+            transition: color 0.3s;
+        }
+
+        footer i:hover {
+            color: #dce775;
+        }
+
+        @media (max-width: 768px) {
+            nav ul li {
+                margin: 0 10px;
+            }
+
+            .internship {
+                padding: 1.5rem;
+                max-width: 100%;
+            }
+
+            .internship h2 {
+                font-size: 1.5rem;
+            }
+
+            .apply-button {
+                font-size: 0.9rem;
+                padding: 0.5rem 1rem;
+            }
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1><i class="fa fa-briefcase"></i> Sly Solutions</h1>
+    </header>
+    <main>
+        <section id="internships">
+            <h2>Available Internships</h2>
+            <div class="internships-container">
+                <div class="internship">
+                    <h2>Web Development Internship</h2>
+                    <p>Join our team as a Web Development intern. You'll work on creating and maintaining websites using the latest technologies.</p>
+                    <a class="apply-button" href="https://forms.gle/TdEoi61M5K253b5K8" target="_blank">Apply Now</a>
+                </div>
+                <div class="internship">
+                    <h2>Android Development Internship</h2>
+                    <p>We are looking for an Android Development intern to help develop innovative mobile applications.</p>
+                    <a class="apply-button" href="https://forms.gle/TdEoi61M5K253b5K8" target="_blank">Apply Now</a>
+                </div>
+                <div class="internship">
+                    <h2>Fullstack Webdeveloper Internship</h2>
+                    <p>Join our team as a Full Stack intern to enhance your coding skills and gain hands-on project experience.</p>
+                    <a class="apply-button" href="https://forms.gle/TdEoi61M5K253b5K8" target="_blank">Apply Now</a>
+                </div>
+                <div class="internship">
+                    <h2>Software Development Internship</h2>
+                    <p>Join our team as a Software Development Intern and gain practical experience working on cutting-edge projects.</p>
+                    <a class="apply-button" href="https://forms.gle/TdEoi61M5K253b5K8" target="_blank">Apply Now</a>
+                </div>
+                <div class="internship">
+                    <h2>Cross Platform Application Development Internship</h2>
+                    <p>Join our team as a React Native or Flutter developer intern. You'll work on creating cross-platform applications.</p>
+                    <a class="apply-button" href="https://forms.gle/TdEoi61M5K253b5K8" target="_blank">Apply Now</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Sly Solutions. All rights reserved.</p>
+        <div>
+            <a href="https://www.facebook.com/SlySolutions" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.twitter.com/SlySolutions" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.linkedin.com/company/SlySolutions" target="_blank"><i class="fab fa-linkedin"></i></a>
+        </div>
+    </footer>
+</body>
+</html>
